@@ -8,15 +8,17 @@
     Padding="20">
         <Label Text="Ingresar un Numero"
            FontSize="20"></Label>
+        
         <Entry x:Name="NumeroTelefonoTexto"
            Text="1-555-NETMAUI"/>
+        
         <Button x:Name="BtnTraducir"
             Text="Traducir"
-            Clicked="BtnTraducir_Clicked"/>
+            Clicked="OnTranslate"/>
         <Button x:Name="Btnllamar"
             Text="Llamar"
             IsEnabled="False"
-            Clicked="Btnllamar_Clicked"/>
+            Clicked="OnCall"/>
     </VerticalStackLayout>
 
 </ContentPage>
