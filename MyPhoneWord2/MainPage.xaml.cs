@@ -33,7 +33,19 @@
        "LLAMAR",
        "SALIR"))
             {
-                // TODO: dial the phone
+                try
+                {
+                    if (PhoneDialer.Default.IsSupported)
+                        PhoneDialer.Default.Open(translatedNumber);
+                }
+                catch (ArgumentNullException) 
+                {
+                    await DisplayAlert("Unable to dial", "Numero no valido", "Ok");
+                }
+                catch (Exception)
+                {
+                    await DisplayAlert("Desactivado", "no se puede marcar", "OK");
+                }
             }
         }
     }
