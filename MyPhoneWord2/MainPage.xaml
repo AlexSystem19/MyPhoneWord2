@@ -6,7 +6,7 @@
     <VerticalStackLayout
     Spacing="15"
     Padding="20">
-        <Label Text="Ingresar un Numero"
+        <Label Text="Ingresar un número telefónico escrito con letras (por ejemplo, INFO-LINE como 4636-5463)."
            FontSize="20"></Label>
         
         <Entry x:Name="NumeroTelefonoTexto"
