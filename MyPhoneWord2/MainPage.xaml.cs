@@ -1,12 +1,26 @@
-﻿namespace MyPhoneWord2
+﻿using System.Drawing;
+
+namespace MyPhoneWord2
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
             InitializeComponent();
+            ChangedOb();
         }
         string translatedNumber;
+
+        void ChangedOb()
+        {
+            if (translatedNumber != null)
+            {
+                Btnllamar.IsEnabled = false;
+                Btnllamar.FontSize = 6;
+            }
+
+        }
 
         private void OnTranslate(object sender, EventArgs e)
         {
@@ -21,7 +35,7 @@
             else
             {
                 Btnllamar.IsEnabled = false;
-                Btnllamar.Text = "llamar";
+                Btnllamar.Text = "Ingresar numero en letras";
             }
         }
 
